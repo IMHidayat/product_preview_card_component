@@ -1,15 +1,13 @@
-import "../sass/home.sass";
 import perfume from "../assets/image-product-mobile.jpg";
 import perfumeDesktop from "../assets/image-product-desktop.jpg";
 
 export default function Home() {
-  console.log(window.innerWidth);
   return (
     <>
       <main className="min-h-screen">
-        <article className="p-3 h-screen grid place-items-center">
+        <article className="grid place-items-center p-3 h-screen ">
           <section>
-            <div className="card lg:card-side max-w-[600px] grid lg:grid-cols-2 bg-white rounded-lg">
+            <div className="card lg:card-side grid lg:grid-cols-2 max-w-[600px] bg-white rounded-lg">
               <figure>
                 <img className="lg:hidden" src={perfume} alt="Perfume Image" />
                 <img className="hidden lg:inline-block object-cover contrast-125 brightness-90" src={perfumeDesktop} alt="Perfume Image" />
@@ -20,7 +18,7 @@ export default function Home() {
                 <p className="mb-3 leading-normal text-paragraph text-c1 ">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
                 <div className="flex mb-2 gap-5 items-center">
                   <span className="text-primary text-3xl font-fraunces">$149.99</span>
-                  <span className="text-gray-400 line-through text-sm">$169.99</span>
+                  <span className="line-through text-sm text-gray-400 ">$169.99</span>
                 </div>
                 <button className="btn btn-primary normal-case">
                   <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
