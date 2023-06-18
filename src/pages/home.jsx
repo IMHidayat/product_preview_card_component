@@ -1,9 +1,38 @@
 import "../sass/home.sass";
+import perfume from "../assets/image-product-mobile.jpg";
+import perfumeDesktop from "../assets/image-product-desktop.jpg";
 
 export default function Home() {
+  console.log(window.innerWidth);
   return (
     <>
-      <h1>Hello world this is homeasdf asdfl; </h1>
+      <main className="min-h-screen">
+        <article className="p-3 h-screen grid place-items-center">
+          <section>
+            <div className="card lg:card-side max-w-[600px] grid lg:grid-cols-2 bg-white rounded-lg">
+              <figure>
+                <img className="lg:hidden" src={perfume} alt="Perfume Image" />
+                <img className="hidden lg:inline-block object-cover contrast-125 brightness-90" src={perfumeDesktop} alt="Perfume Image" />
+              </figure>
+              <div className="card-body p-6 lg:p-8 lg:gap-5">
+                <h2 className="card-title tracking-[.3rem] text-xs font-light text-c1">PERFUME</h2>
+                <h2 className="mb-2 text-3xl font-bold font-fraunces leading-none ">Gabrielle Essence Eau De Parfum</h2>
+                <p className="mb-3 leading-normal text-paragraph text-c1 ">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+                <div className="flex mb-2 gap-5 items-center">
+                  <span className="text-primary text-3xl font-fraunces">$149.99</span>
+                  <span className="text-gray-400 line-through text-sm">$169.99</span>
+                </div>
+                <button className="btn btn-primary normal-case">
+                  <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF" />
+                  </svg>
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
     </>
   );
 }

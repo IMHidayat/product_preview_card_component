@@ -4,10 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        color1: "#fff",
+        c1: "#6b7280",
+        c2: "#006ead",
+        c3: "#e63e30",
+        c4: "#fed103",
       },
       fontSize: {
-        fontsize1: "1rem",
+        paragraph: "14px",
+      },
+      fontFamily: {
+        montserrat: "montserrat,times,serif",
+        fraunces: "fraunces,times,serif",
       },
     },
     screens: {
@@ -20,15 +27,43 @@ export default {
   },
   // eslint-disable-next-line no-undef
   plugins: [require("daisyui")],
-  // daisyUI config (optional - here are the default values)
   daisyui: {
-    themes: ["lofi"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
-    darkTheme: "dark", // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    rtl: false, // rotate style direction from left-to-right to right-to-left. You also need to add dir="rtl" to your html tag and install `tailwindcss-flip` plugin for Tailwind CSS.
-    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+    styled: true,
+    themes: [
+      {
+        light: {
+          primary: "#3d8168",
+          secondary: "#f000b8",
+          accent: "#1dcdbc",
+          neutral: "#2b3440",
+          "base-100": "#f3eae3",
+          info: "#3abff8",
+          success: "#36d399",
+          warning: "#fbbd23",
+          error: "#f87272",
+          // "--border-btn": 0,
+        },
+      },
+      {
+        dark: {
+          primary: "#641ae6",
+          secondary: "##d926a9",
+          accent: "#1fb2a6",
+          neutral: "#2a323c",
+          "base-100": "#1d232a",
+          info: "#006ead",
+          success: "#00ff19",
+          warning: "#fed103",
+          error: "#f87272",
+          // "--border-btn": 0,
+        },
+      },
+    ],
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: "",
+    darkTheme: "light",
   },
 };
